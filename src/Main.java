@@ -15,10 +15,11 @@ public class Main {
         //table1.createTable();
         //table1.insertProduct(new Prodotto(1, "T-Shirt", 15.99, 100));
         //table1.insertProduct(new Prodotto(2,"Jeans",59.95,50));
-        //table1.insertProduct(new Prodotto(3,"Cappello",12.50,200));
+        //table1.insertProduct(new Prodotto(3,"C<appello",12.50,200));
         //table1.printAllProducts();
         //table1.printByID(1);
-        table1.deleteByID(5);
+        //table1.deleteByID(5);
+        table1.updateByID(new Prodotto(1, "T-Shirt", 25.99, 200));
     }
 
     public static void sumOfNumber(int[] numbers){

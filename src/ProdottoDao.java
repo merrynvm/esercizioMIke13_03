@@ -114,4 +114,21 @@ public class ProdottoDao {
 
         conn.close();
     }
+
+    public void updateByID(Prodotto productWithNewData) throws SQLException {
+        Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+        Statement statement = conn.createStatement();
+
+        String printQuery =
+                "UPDATE prodotti SET nome_prodotto=" + "'" + productWithNewData.getNome_prodotto()
+                        + "', prezzo='" + productWithNewData.getPrezzo()
+                        + "', quantita='" + productWithNewData.getQuantita()
+                        + "'WHERE ID=" + productWithNewData.getId() + " ";
+
+        int resultSet = statement.executeUpdate(printQuery);
+
+        System.out.println("Aggiornata la riga!");
+
+        conn.close();
+    }
 }
